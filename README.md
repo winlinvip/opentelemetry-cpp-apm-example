@@ -65,6 +65,9 @@ env TOKEN=xxxxxx opentelemetry-cpp-apm-example/build/example_otlp_grpc
 ```
 
 > Note: Please change the endpoint if not `ap-guangzhou.apm.tencentcs.com:4317`
+
 > Note: Please change the `service.name` to your service name.
+
+> Note: Please use wireshark to capture the packet and decode as HTTP/2, or install plugin [otel-wireshark-plugin](https://github.com/winlinvip/otel-wireshark-plugin#usage).
 
 You could open the [TAPM console](https://console.cloud.tencent.com/apm/monitor/interface?service=srs-apm-sdk) to query the traces.
