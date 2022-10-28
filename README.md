@@ -9,8 +9,9 @@ Please use Ubuntu 20, and install tools:
 ```bash
 sudo apt update -y
 sudo apt install -y cmake gdb gcc g++ make autoconf automake libtool
-sudo apt install -y libcurl4-openssl-dev
 ```
+
+> Note: Use OTLP over gRPC only. If need OTLP over HTTP, please install `libcurl4-openssl-dev`.
 
 Build [protobuf](https://github.com/protocolbuffers/protobuf/blob/main/cmake/README.md):
 
@@ -61,7 +62,7 @@ cmake .. && make
 Run by:
 
 ```bash
-env TOKEN=xxxxxx opentelemetry-cpp-apm-example/build/example_otlp_grpc
+env TOKEN=xxxxxx ./opentelemetry-cpp-apm-example/build/example_otlp_grpc
 ```
 
 > Note: Please change the endpoint if not `ap-guangzhou.apm.tencentcs.com:4317`

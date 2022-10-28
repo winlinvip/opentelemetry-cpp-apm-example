@@ -7,10 +7,6 @@ project(opentelemetry-cpp-apm-example)
 find_package(opentelemetry-cpp CONFIG REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gRPC REQUIRED)
-# For WITH_OTLP_HTTP
-find_package(CURL REQUIRED)
-# For not WITH_API_ONLY
-find_package(nlohmann_json REQUIRED)
 
 add_executable(example_otlp_grpc grpc_main.cc)
 target_include_directories(example_otlp_grpc PRIVATE ${OPENTELEMETRY_CPP_INCLUDE_DIRS})
